@@ -3,201 +3,199 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal|Chakra+Petch|Dosis|Marmelad|Mate|Mate+SC|Montserrat|Raleway|Ubuntu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
 
     <title>Andres Bayona</title>
 <!---.................................................................... styles
 --->
-<style media="screen">
+    <style media="screen">
 
-:root {
-  --mainColor: #ff7a45;
-  --maxWidth: 800px;
-  --backgroundColor: #eee;
-}
+      :root {
+        --mainColor: #ff7a45;
+        --maxWidth: 800px;
+        --backgroundColor: #eee;
+      }
 
-html, body {
-  margin: 0px;
-  padding: 0px;
-  font-family: 'Arsenal', sans-serif;
-  color: #555;
-}
+      html, body {
+        margin: 0px;
+        padding: 0px;
+        font-family: 'Arsenal', sans-serif;
+        color: #555;
+      }
 
-body {
-  padding: 10px;
-  max-width: var(--maxWidth);
-  margin: auto;
-  background-color: var(--backgroundColor);
-}
+      body {
+        padding: 10px;
+        max-width: var(--maxWidth);
+        margin: auto;
+        background-color: var(--backgroundColor);
+      }
 
-p {
-  text-align: justify;
-}
+      p {
+        text-align: justify;
+      }
 
-mark {
-  background-color: #fff;
-  color: #13c2c2;
-  padding: 0px 1px;
-}
+      mark {
+        background-color: #fff;
+        color: #13c2c2;
+        padding: 0px 1px;
+      }
 
-#banner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
+      #banner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
 
-#banner {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-}
+      #banner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+      }
 
-#name, #title {
-  display: block;
-  font-family: 'Mate SC';
-
-}
-  #name > a {
-    text-decoration: none;
-    color: #444;
-  }
-
-#name {
-  font-size: 40px;
-}
-
-#title {
-  font-size: 22px;
-  color: #555;
-}
-
-#line_highlint {
-  width: calc(800px - 155px);
-  height: 10px;
-  overflow: hidden;
-}
-
-
-#background {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-}
-   #background > section {
-       max-width: 50%;
-       min-width: 400px;
-   }
-    #background > section > div {
-      margin: 10px;
-    }
-      #background > section > div > header {
-        font-size: 18px;
+      #name, #title {
+        display: block;
         font-family: 'Mate SC';
+
       }
-      #background > section > div > span {
+        #name > a {
+          text-decoration: none;
+          color: #444;
+        }
+
+      #name {
+        font-size: 40px;
+      }
+
+      #title {
+        font-size: 22px;
+        color: #555;
+      }
+
+      #line_highlint {
+        width: calc(800px - 155px);
+        height: 10px;
+        overflow: hidden;
+      }
+
+
+      #background {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+         #background > section {
+             max-width: 50%;
+             min-width: 400px;
+         }
+          #background > section > div {
+            margin: 10px;
+          }
+            #background > section > div > header {
+              font-size: 18px;
+              font-family: 'Mate SC';
+            }
+            #background > section > div > span {
+              font-size: 12px;
+              color: #888;
+            }
+            #background > section > div > p {
+              margin-top: 0px;
+              font-size: 14px;
+            }
+
+
+      #graphs {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: flex-start;
+      }
+        #graphs > div {
+          width: 200px;
+        }
+        #graphs > div > header {
+          font-family: 'Mate SC';
+          font-size:18px;
+          margin-bottom: 10px
+        }
+        #graphs > div > svg > g:hover > text {
+
+            fill: var(--mainColor);
+        }
+        #graphs > div > svg > g:hover > rect {
+
+            fill: var(--mainColor);
+        }
+
+      #references > div {
+        margin: 10px;
+      }
+      .graph_text {
+        user-select: none;
+        font-family: 'Mate SC';
         font-size: 12px;
-        color: #888;
-      }
-      #background > section > div > p {
-        margin-top: 0px;
-        font-size: 14px;
+        transition: background-size .5s;
+        fill: #888;
       }
 
+      .link {
+        cursor: pointer;
+        background:
+           linear-gradient(
+             to bottom, var(--mainColor) 0%,
+             var(--mainColor) 100%
+           );
+        background-position: 0 100%;
+        background-repeat: repeat-x;
+        background-size: 4px 2px;
+        color: #000;
+        text-decoration: none;
+        transition: background-size .5s;
+        margin: 0px 5px;
+      }
+        .link:hover {
+          background-size: 4px 50px;
+        }
 
-#graphs {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-  align-items: flex-start;
-}
-  #graphs > div {
-    width: 200px;
-  }
-  #graphs > div > header {
-    font-family: 'Mate SC';
-    font-size:18px;
-    margin-bottom: 10px
-  }
-  #graphs > div > svg > g:hover > text {
+      .header_section {
+        color: #aaa;
+        font-family: 'Mate SC';
+        font-size: 24px;
+      }
 
-      fill: var(--mainColor);
-  }
-  #graphs > div > svg > g:hover > rect {
+      @media only screen and (max-width: 800px) {
+        /* For mobile phones: */
 
-      fill: var(--mainColor);
-  }
+        #name {
+          font-size: 4.5vw;
+        }
 
-#references > div {
-  margin: 10px;
-}
-.graph_text {
-  user-select: none;
-  font-family: 'Mate SC';
-  font-size: 12px;
-  transition: background-size .5s;
-  fill: #888;
-}
+        #title {
+          font-size: 4vw;
+        }
 
-.link {
-  cursor: pointer;
-  background:
-     linear-gradient(
-       to bottom, var(--mainColor) 0%,
-       var(--mainColor) 100%
-     );
-  background-position: 0 100%;
-  background-repeat: repeat-x;
-  background-size: 4px 2px;
-  color: #000;
-  text-decoration: none;
-  transition: background-size .5s;
-  margin: 0px 5px;
-}
-  .link:hover {
-    background-size: 4px 50px;
-  }
+        #line_highlint {
+          width: calc(100vw - 125px);
+        }
 
-.header_section {
-  color: #aaa;
-  font-family: 'Mate SC';
-  font-size: 24px;
-}
+        #image_profile   {
+          width: 100px;
+          height: 100px;
+        }
 
-@media only screen and (max-width: 800px) {
-  /* For mobile phones: */
+        #image_profile > svg {
+          transform: scale(0.7)  translate(-40px, -40px);
+        }
 
-  #name {
-    font-size: 4.5vw;
-  }
-
-  #title {
-    font-size: 4vw;
-  }
-
-  #line_highlint {
-    width: calc(100vw - 125px);
-  }
-
-  #image_profile   {
-    width: 100px;
-    height: 100px;
-  }
-
-  #image_profile > svg {
-    transform: scale(0.7)  translate(-40px, -40px);
-  }
-
-  .header_section {
-    font-size: 3.5vw;
-  }
-}
-
-
-</style>
+        .header_section {
+          font-size: 3.5vw;
+        }
+      }
+    </style>
   </head>
   <body>
     <header id="banner">
@@ -227,9 +225,11 @@ mark {
                      keySplines="0.13 0.58 0.52 0.83"/>
           </rect>
         </svg>
-        <span id="title">programador</span>
-        <span id="contact">
-        📯
+        <span id="title">
+          <span lang="es">programador</span>
+          <span lang="en">programmer</span>
+        </span>
+        <span >📯
           <a class="link" rel="external" target="_blank" href="https://wa.me/573105506907">
             whatsapp
           </a>
@@ -239,67 +239,93 @@ mark {
           <a class="link" rel="external" target="_blank" target="_top" href="https://twitter.com/afbayonac">
             twitter
           </a>
+          <a class="link" rel="external" target="_blank" target="_top" href="https://www.linkedin.com/in/afbayonac/">
+            linkedin
+          </a>
+          <a class="link" rel="external" target="_blank" target="_top" href="https://github.com/afbayonac">
+            github
+          </a>
           <p></p>
         </span>
       </div>
     </header>
     <section id="sumary">
-      <header class="header_section" id="sumary_header"></header>
-      <p>
+      <header class="header_section" lang="es">resumen</header>
+      <header class="header_section" lang="en">sumary</header>
+      <p lang='es'>
         Programador y desarrollador web con predilección a la programación funcional, entusiasta de la cultura de código abierto e interesado en desarrollar herramientas que tengan impacto en la sociedad, actualmente terminando mi ciclo universitario, fascinado con la analítica visual y con ganas de enfocar mis aprendizaje en las diferentes herramientas de almacenamiento y transmisión de datos.
+      </p>
+      <p lang='en'>
+        Programmer and web developer with a predilection for functional programming, enthusiastic about open source culture and interested in developing tools that have an impact on society, currently finishing my university cycle, fascinated with visual analytics and want to focus my learning on different tools for data storage and transmission.
       </p>
     </section>
     <div id="background">
       <section id="experience">
-        <header class="header_section" id="experience_header"></header>
+        <header class="header_section" lang="en">experience</header>
+        <header class="header_section" lang="es">experiencia</header>
         <div>
-          <header>desarrollador de software </header>
+          <header lang="en">software developer</header>
+          <header lang="es">desarrollador de software</header>
           <span>INOVA TECNOLOGIA</span>
-          <p>
-            Desarrollo de una aplicacion SKADA para el monitoreo de citygates de gas natural y desarrollo de software y hardware de asociado a radios de comunicacion de pozos petroliferos.
+          <p lang="es">
+            Desarrollo de una aplicacion SCADA para el monitoreo de citygates de gas natural y desarrollo de software y hardware de asociado a radios de comunicacion de pozos petroliferos.
+          </p>
+          <p lang="en">
+            Development of a SCADA application for monitoring natural gas citygates and development of software and hardware associated with oil well communication radios.
           </p>
         </div>
         <div>
-          <header>participante apps.co x iteracion</header>
+          <header lang="es">participante apps.co x iteración</header>
+          <header lang="en">participant apps.co x iteration</header>
           <span>SEVENT</span>
-          <p>
-            Desarollo de una aplicacion con la funcion de promover espacios culturales
+          <p lang="es">
+            Desarrollo de una aplicacion con la funcion de promover espacios culturales
+          </p>
+          <p lang="en">
+            Development of an application with the function of promoting cultural spaces
           </p>
         </div>
         <div>
-          <header>co-organizador freedom software day 2016 uis</header>
+          <header lang="es">co-organizador freedom software day 2016 uis</header>
+          <header lang="en">co-organizer freedom software day 2016 uis</header>
           <span>CUSOL</span>
-          <p>
-            Participante y organizador del FISOL un evento con la idea de prover el uso de herramientas libres
+          <p lang="es">
+            Participante y organizador del FISOL, evento enfocado de promover el uso de herramientas libres
+          </p>
+          <p lang="en">
+            Participant and organizer of FISOL event focused on promoting the use of free tools
           </p>
         </div>
       </section>
       <section id="education">
-        <header class="header_section" id="education_header"></header>
+        <header class="header_section" lang="en">education</header>
+        <header class="header_section" lang="es">educación</header>
         <div>
-          <header>ingenieria sistemas e informatica</header>
-
-          <span>Universidad industrial de santander UIS <mark>(realizando trabajo de grado)</mark></span>
+          <header lang="es">ingenieria sistemas e informatica</header>
+          <header lang='en'>systems and computer engineering</header>
+          <span>Universidad industrial de santander UIS
+            <mark lang="es">(realizando trabajo de grado)</mark>
+            <mark lang="en">(doing degree work)</mark>
+          </span>
         </div>
         <div>
           <header>m102: mongodb for dbas</header>
           <span>MongoDB University</span>
         </div>
         <div>
-          <header>detección de objetos</header>
+          <header lang="es">detección de objetos</header>
+          <header lang="en">object detection</header>
           <span>Coursera - Universidad Autónoma de Barcelona</span>
-        </div>
-        <div>
-          <header>bachillerato</header>
-          <span>Luis Carlos Galan Sarmiento 2012</span>
         </div>
       </section>
     </div>
     <section id="skills">
-      <header class="header_section" id="skills_header"></header>
+      <header class="header_section" lang="en">skills</header>
+      <header class="header_section" lang="es">habilidades</header>
       <section id="graphs">
         <div>
-          <header> herramientas </header>
+          <header lang="es">herramientas</header>
+          <header lang="en">tools</header>
           <svg id="skills_tools" height="135" width="200">
             <pattern
                id="Hatch1.0x135"
@@ -325,23 +351,27 @@ mark {
           </svg>
         </div>
         <div>
-          <header> lenguajes </header>
+          <header lang="es">lenguajes</header>
+          <header lang="en">languages</header>
           <svg id="skills_lenguajes" height="90" width="200">
           </svg>
         </div>
         <div>
-          <header> librerias </header>
+          <header lang="es">librerias</header>
+          <header lang="en">libraries</header>
           <svg id="skills_libraries" height="60" width="200">
           </svg>
         </div>
         <div>
-          <header> idiomas </header>
+          <header lang="es">idiomas</header>
+          <header lang="en">idioms</header>
           <svg id="skills_idioms" height="45" width="200">
           </svg>
         </div>
     </section>
     <section id="references">
-      <header class="header_section" id="references_header"></header>
+      <header class="header_section" lang="en">references</header>
+      <header class="header_section" lang="es">referencias</header>
       <div>
       Enrique Agusto Rivera
       <a class="link" rel="external" target="_blank" href="https://wa.me/3043760216">
@@ -357,49 +387,18 @@ mark {
   <script>
 function beforeLoad () {
 // ........................................................................ text
-const texts = [
-  {
-    id: 'sumary_header',
-    text: {
-      es: 'resumen',
-      en: 'sumary'
-    }
-  },
-  {
-    id: 'education_header',
-    text: {
-      es: 'educación',
-      en: 'education'
-    }
-  },
-  {
-    id: 'skills_header',
-    text: {
-      es: 'habilidades',
-      en: 'skills'
-    }
-  },
-  {
-    id: 'references_header',
-    text: {
-      es: 'referencias',
-      en: 'references'
-    }
-  },
-  {
-    id: 'experience_header',
-    text: {
-      es: 'experiencia',
-      en: 'experience'
-    }
-  },
-]
 
-texts.map(({text, id}) => {
-  // todo check lang
-  const node = document.getElementById(id)
-  node.innerHTML = text[navigator.language] || text.es
-})
+
+//default english
+const lang = navigator.language.split('-')[0] !== 'es' ? 'es' : 'en'
+
+document
+  .querySelectorAll('header[lang], p[lang], span[lang], mark[lang]')
+  .forEach(node => {
+    console.log(node, node.lang, lang)
+    if (node.lang !== lang) node.remove()
+  });
+
 
 // ..................................................................... scripts
 
@@ -440,14 +439,13 @@ libraries.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_libraries, d, i))
 const idioms = [
   ['español', 100],
   ['english 😫', 30],
-  ['français', 5]
+  ['français', 2]
 ]
 
 const svg_idioms = document.getElementById('skills_idioms')
 idioms.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_idioms, d, i))
 
 function bars(nodeSVG, d, i) {
-  console.log(d)
   const max_x = 200
   const min_x = 80
   const max_wid = max_x - min_x
