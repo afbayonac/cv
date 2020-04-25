@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Arsenal|Chakra+Petch|Dosis|Marmelad|Mate|Mate+SC|Montserrat|Raleway|Ubuntu&display=swap" rel="stylesheet">
+
+    <title>Andres Bayona</title>
+<!---.................................................................... styles
+--->
+<style media="screen">
+
+:root {
+  --mainColor: #ff7a45;
+  --maxWidth: 800px;
+  --backgroundColor: #eee;
+}
+
+html, body {
+  margin: 0px;
+  padding: 0px;
+  font-family: 'Arsenal', sans-serif;
+  color: #555;
+}
+
+body {
+  padding: 10px;
+  max-width: var(--maxWidth);
+  margin: auto;
+  background-color: var(--backgroundColor);
+}
+
+p {
+  text-align: justify;
+}
+
+mark {
+  background-color: #fff;
+  color: #13c2c2;
+  padding: 0px 1px;
+}
+
+#banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#banner {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#name, #title {
+  display: block;
+  font-family: 'Mate SC';
+
+}
+  #name > a {
+    text-decoration: none;
+    color: #444;
+  }
+
+#name {
+  font-size: 40px;
+}
+
+#title {
+  font-size: 22px;
+  color: #555;
+}
+
+#line_highlint {
+  width: calc(800px - 155px);
+  height: 10px;
+  overflow: hidden;
+}
+
+
+#background {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+   #background > section {
+       max-width: 50%;
+       min-width: 400px;
+   }
+    #background > section > div {
+      margin: 10px;
+    }
+      #background > section > div > header {
+        font-size: 18px;
+        font-family: 'Mate SC';
+      }
+      #background > section > div > span {
+        font-size: 12px;
+        color: #888;
+      }
+      #background > section > div > p {
+        margin-top: 0px;
+        font-size: 14px;
+      }
+
+
+#graphs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: flex-start;
+}
+  #graphs > div {
+    width: 200px;
+  }
+  #graphs > div > header {
+    font-family: 'Mate SC';
+    font-size:18px;
+    margin-bottom: 10px
+  }
+  #graphs > div > svg > g:hover > text {
+
+      fill: var(--mainColor);
+  }
+  #graphs > div > svg > g:hover > rect {
+
+      fill: var(--mainColor);
+  }
+
+#references > div {
+  margin: 10px;
+}
+.graph_text {
+  user-select: none;
+  font-family: 'Mate SC';
+  font-size: 12px;
+  transition: background-size .5s;
+  fill: #888;
+}
+
+.link {
+  cursor: pointer;
+  background:
+     linear-gradient(
+       to bottom, var(--mainColor) 0%,
+       var(--mainColor) 100%
+     );
+  background-position: 0 100%;
+  background-repeat: repeat-x;
+  background-size: 4px 2px;
+  color: #000;
+  text-decoration: none;
+  transition: background-size .5s;
+  margin: 0px 5px;
+}
+  .link:hover {
+    background-size: 4px 50px;
+  }
+
+.header_section {
+  color: #aaa;
+  font-family: 'Mate SC';
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 800px) {
+  /* For mobile phones: */
+
+  #name {
+    font-size: 4.5vw;
+  }
+
+  #title {
+    font-size: 4vw;
+  }
+
+  #line_highlint {
+    width: calc(100vw - 125px);
+  }
+
+  #image_profile   {
+    width: 100px;
+    height: 100px;
+  }
+
+  #image_profile > svg {
+    transform: scale(0.7)  translate(-40px, -40px);
+  }
+
+  .header_section {
+    font-size: 3.5vw;
+  }
+}
+
+
+</style>
+  </head>
+  <body>
+    <header id="banner">
+      <div id="image_profile">
+        <svg width="150px" height="150px">
+          <defs>
+            <clipPath id="circle_profile">
+              <circle cx="75" cy="75" r="50" fill="#ffffff" />
+            </clipPath>
+          </defs>
+          <path d="M 15 75
+                   A 50 50 0 1 1 135 75
+                   A 50 50 0 1 1 15 75 "
+                fill="none" stroke="#aaa"
+                stroke-width="5">
+          </path>
+          <image x="25" y="25" xlink:href="profile_scaled.jpg" alt="profile image"  width="100px" clip-path="url(#circle_profile)"/>
+        </svg>
+      </div>
+      <div>
+        <span id="name"><a href="https://www.linkedin.com/in/afbayonac">Andres Felipe Bayona Chinchilla</a></span>
+
+        <svg id="line_highlint">
+          <rect x="0" y="1" height="5" width="0">
+            <animate attributeName="width" to="700" begin="0s" dur="1s"
+                     calcMode="spline" fill="freeze" keyTimes="0 ; 1"
+                     keySplines="0.13 0.58 0.52 0.83"/>
+          </rect>
+        </svg>
+        <span id="title">programador</span>
+        <span id="contact">
+        📯
+          <a class="link" rel="external" target="_blank" href="https://wa.me/573105506907">
+            whatsapp
+          </a>
+          <a class="link" rel="external"target="_blank" href="mailto:afbayonac@gmail.com?Subject=CV">
+            mail
+          </a>
+          <a class="link" rel="external" target="_blank" target="_top" href="https://twitter.com/afbayonac">
+            twitter
+          </a>
+          <p></p>
+        </span>
+      </div>
+    </header>
+    <section id="sumary">
+      <header class="header_section" id="sumary_header"></header>
+      <p>
+        Programador y desarrollador web con predilección a la programación funcional, entusiasta de la cultura de código abierto e interesado en desarrollar herramientas que tengan impacto en la sociedad, actualmente terminando mi ciclo universitario, fascinado con la analítica visual y con ganas de enfocar mis aprendizaje en las diferentes herramientas de almacenamiento y transmisión de datos.
+      </p>
+    </section>
+    <div id="background">
+      <section id="experience">
+        <header class="header_section" id="experience_header"></header>
+        <div>
+          <header>desarrollador de software </header>
+          <span>INOVA TECNOLOGIA</span>
+          <p>
+            Desarrollo de una aplicacion SKADA para el monitoreo de citygates de gas natural y desarrollo de software y hardware de asociado a radios de comunicacion de pozos petroliferos.
+          </p>
+        </div>
+        <div>
+          <header>participante apps.co x iteracion</header>
+          <span>SEVENT</span>
+          <p>
+            Desarollo de una aplicacion con la funcion de promover espacios culturales
+          </p>
+        </div>
+        <div>
+          <header>co-organizador freedom software day 2016 uis</header>
+          <span>CUSOL</span>
+          <p>
+            Participante y organizador del FISOL un evento con la idea de prover el uso de herramientas libres
+          </p>
+        </div>
+      </section>
+      <section id="education">
+        <header class="header_section" id="education_header"></header>
+        <div>
+          <header>ingenieria sistemas e informatica</header>
+
+          <span>Universidad industrial de santander UIS <mark>(realizando trabajo de grado)</mark></span>
+        </div>
+        <div>
+          <header>m102: mongodb for dbas</header>
+          <span>MongoDB University</span>
+        </div>
+        <div>
+          <header>detección de objetos</header>
+          <span>Coursera - Universidad Autónoma de Barcelona</span>
+        </div>
+        <div>
+          <header>bachillerato</header>
+          <span>Luis Carlos Galan Sarmiento 2012</span>
+        </div>
+      </section>
+    </div>
+    <section id="skills">
+      <header class="header_section" id="skills_header"></header>
+      <section id="graphs">
+        <div>
+          <header> herramientas </header>
+          <svg id="skills_tools" height="135" width="200">
+            <pattern
+               id="Hatch1.0x135"
+               inkscape:stockid="Hatch 1.0 x -45°"
+               x="0"
+               y="0"
+               width="5.010992937542464"
+               height="5.010992937542464"
+               patternUnits="userSpaceOnUse">
+              <path
+                 style="stroke:#000000;stroke-width:0.25mm"
+                 d="M 1.4676858509282904,-3.5433070866141736 8.554300024156637,3.5433070866141736"
+                 id="path14" />
+              <path
+                 style="stroke:#000000;stroke-width:0.25mm"
+                 d="M -3.5433070866141736,-3.5433070866141736 8.554300024156637,8.554300024156637"
+                 id="path16" />
+              <path
+                 style="stroke:#000000;stroke-width:0.25mm"
+                 d="M -3.5433070866141736,1.4676858509282904 3.5433070866141736,8.554300024156637"
+                 id="path18" />
+            </pattern>
+          </svg>
+        </div>
+        <div>
+          <header> lenguajes </header>
+          <svg id="skills_lenguajes" height="90" width="200">
+          </svg>
+        </div>
+        <div>
+          <header> librerias </header>
+          <svg id="skills_libraries" height="60" width="200">
+          </svg>
+        </div>
+        <div>
+          <header> idiomas </header>
+          <svg id="skills_idioms" height="45" width="200">
+          </svg>
+        </div>
+    </section>
+    <section id="references">
+      <header class="header_section" id="references_header"></header>
+      <div>
+      Enrique Agusto Rivera
+      <a class="link" rel="external" target="_blank" href="https://wa.me/3043760216">
+        whatsapp
+      </a>
+      <a class="link" rel="external"target="_blank" href="mailto:enrique.rivera@innovatecnologia.com?Subject=Reference%20Andres%20Bayona" />
+        mail
+      </a>
+    </div>
+    </section>
+  </body>
+
+  <script>
+function beforeLoad () {
+// ........................................................................ text
+const texts = [
+  {
+    id: 'sumary_header',
+    text: {
+      es: 'resumen',
+      en: 'sumary'
+    }
+  },
+  {
+    id: 'education_header',
+    text: {
+      es: 'educación',
+      en: 'education'
+    }
+  },
+  {
+    id: 'skills_header',
+    text: {
+      es: 'habilidades',
+      en: 'skills'
+    }
+  },
+  {
+    id: 'references_header',
+    text: {
+      es: 'referencias',
+      en: 'references'
+    }
+  },
+  {
+    id: 'experience_header',
+    text: {
+      es: 'experiencia',
+      en: 'experience'
+    }
+  },
+]
+
+texts.map(({text, id}) => {
+  // todo check lang
+  const node = document.getElementById(id)
+  node.innerHTML = text[navigator.language] || text.es
+})
+
+// ..................................................................... scripts
+
+const tools = [
+  ['kicad', 50],
+  ['inkscape', 40],
+  ['vscode', 90],
+  ['webstorm', 30],
+  ['arduino', 80],
+  ['npm', 60],
+  ['git', 70],
+  ['aws', 40],
+  ['google-cloud', 20],
+]
+const svg_tools = document.getElementById('skills_tools')
+tools.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_tools, d, i))
+
+const lenguajes  = [
+  ['python', 40],
+  ['javascript-node', 80],
+  ['typescript', 80],
+  ['bash', 30],
+  ['c++', 40],
+  ['sql', 30]
+]
+const svg_lenguajes = document.getElementById('skills_lenguajes')
+lenguajes.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_lenguajes, d, i))
+
+const libraries = [
+  ['react', 40],
+  ['angular', 20],
+  ['d3js', 50],
+  ['mocha', 60],
+]
+const svg_libraries = document.getElementById('skills_libraries')
+libraries.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_libraries, d, i))
+
+const idioms = [
+  ['español', 100],
+  ['english 😫', 30],
+  ['français', 5]
+]
+
+const svg_idioms = document.getElementById('skills_idioms')
+idioms.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_idioms, d, i))
+
+function bars(nodeSVG, d, i) {
+  console.log(d)
+  const max_x = 200
+  const min_x = 80
+  const max_wid = max_x - min_x
+
+  const y = 15 * i
+
+  const g = document.createElementNS("http://www.w3.org/2000/svg", 'g')
+
+  // text
+  const text = document.createElementNS("http://www.w3.org/2000/svg", 'text')
+
+  text.setAttribute('y', y + 8 )
+  text.setAttribute('x', min_x - 5)
+  text.setAttribute('class', 'graph_text')
+  text.setAttribute('text-anchor', 'end')
+  text.textContent = d[0]
+
+  const rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect')
+  rect.setAttribute('x', min_x )
+  rect.setAttribute('y', y )
+  rect.setAttribute('width', max_wid * d[1])
+  rect.setAttribute('height', 10)
+  rect.setAttribute('fill', "url(#Hatch1.0x135)")
+
+  const animate = document.createElementNS("http://www.w3.org/2000/svg", 'animate')
+  animate.setAttribute('attributeName', 'width')
+  animate.setAttribute('dur', Math.floor(3 * d[1] * 10) / 10 + 's')
+  animate.setAttribute('from', 2)
+  animate.setAttribute('to', max_wid * d[1])
+  rect.appendChild(animate)
+
+  g.appendChild(text)
+  g.appendChild(rect)
+  nodeSVG.appendChild(g)
+}
+
+//--------------------------------------------------------------------
+}
+
+window.onload = beforeLoad()
+
+  </script>
+</html>
