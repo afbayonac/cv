@@ -6,8 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
 
     <title>Andres Bayona</title>
-<!---.................................................................... styles
---->
+<!---.................................................................... styles --->
     <style media="screen">
 
       :root {
@@ -359,7 +358,7 @@
         <div>
           <header lang="es">librerias</header>
           <header lang="en">libraries</header>
-          <svg id="skills_libraries" height="60" width="200">
+          <svg id="skills_libraries" height="75" width="200">
           </svg>
         </div>
         <div>
@@ -390,7 +389,7 @@ function beforeLoad () {
 
 
 //default english
-const lang = navigator.language.split('-')[0] !== 'es' ? 'es' : 'en'
+const lang = navigator.language.split('-')[0] !== 'es' ? 'en' : 'es'
 
 document
   .querySelectorAll('header[lang], p[lang], span[lang], mark[lang]')
@@ -403,16 +402,17 @@ document
 // ..................................................................... scripts
 
 const tools = [
-  ['kicad', 50],
+  ['kicad', 30],
   ['inkscape', 40],
-  ['vscode', 90],
+  ['vscode', 100],
   ['webstorm', 30],
   ['arduino', 80],
   ['npm', 60],
-  ['git', 70],
+  ['git', 80],
   ['aws', 40],
   ['google-cloud', 20],
 ]
+
 const svg_tools = document.getElementById('skills_tools')
 tools.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_tools, d, i))
 
@@ -424,15 +424,18 @@ const lenguajes  = [
   ['c++', 40],
   ['sql', 30]
 ]
+
 const svg_lenguajes = document.getElementById('skills_lenguajes')
 lenguajes.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_lenguajes, d, i))
 
 const libraries = [
-  ['react', 40],
-  ['angular', 20],
+  ['react', 50],
+  ['angular', 40],
   ['d3js', 50],
   ['mocha', 60],
+  ['express', 80]
 ]
+
 const svg_libraries = document.getElementById('skills_libraries')
 libraries.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_libraries, d, i))
 
