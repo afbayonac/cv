@@ -263,6 +263,17 @@
         <header class="header_section" lang="en">experience</header>
         <header class="header_section" lang="es">experiencia</header>
         <div>
+          <header lang="en">web developer</header>
+          <header lang="es">desarrollador web</header>
+          <span>NET CONSULT</span>
+          <p lang="es">
+            Desarrollo de aplicaciones web soportadas en Angular y Firebase
+          </p>
+          <p lang="en">
+            Development of web applications support by Angular and Firebase
+          </p>
+        </div>
+        <div>
           <header lang="en">software developer</header>
           <header lang="es">desarrollador de software</header>
           <span>INOVA TECNOLOGIA</span>
@@ -325,7 +336,7 @@
         <div>
           <header lang="es">herramientas</header>
           <header lang="en">tools</header>
-          <svg id="skills_tools" height="135" width="200">
+          <svg id="skills_tools" height="150" width="200">
             <pattern
                id="Hatch1.0x135"
                inkscape:stockid="Hatch 1.0 x -45°"
@@ -411,6 +422,7 @@ const tools = [
   ['git', 80],
   ['aws', 40],
   ['google-cloud', 20],
+  ['firebase', 30],
 ]
 
 const svg_tools = document.getElementById('skills_tools')
@@ -418,7 +430,8 @@ tools.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_tools, d, i))
 
 const lenguajes  = [
   ['python', 40],
-  ['javascript-node', 80],
+  ['javascript', 80],
+  ['node', 80],
   ['typescript', 80],
   ['bash', 30],
   ['c++', 40],
@@ -459,12 +472,18 @@ function bars(nodeSVG, d, i) {
 
   // text
   const text = document.createElementNS("http://www.w3.org/2000/svg", 'text')
-
   text.setAttribute('y', y + 8 )
   text.setAttribute('x', min_x - 5)
   text.setAttribute('class', 'graph_text')
   text.setAttribute('text-anchor', 'end')
   text.textContent = d[0]
+
+  const rectBack = document.createElementNS("http://www.w3.org/2000/svg", 'rect')
+  rectBack.setAttribute('x', min_x )
+  rectBack.setAttribute('y', y )
+  rectBack.setAttribute('width', max_wid)
+  rectBack.setAttribute('height', 10)
+  rectBack.setAttribute('fill', "#ddd")
 
   const rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect')
   rect.setAttribute('x', min_x )
@@ -473,6 +492,8 @@ function bars(nodeSVG, d, i) {
   rect.setAttribute('height', 10)
   rect.setAttribute('fill', "url(#Hatch1.0x135)")
 
+
+
   const animate = document.createElementNS("http://www.w3.org/2000/svg", 'animate')
   animate.setAttribute('attributeName', 'width')
   animate.setAttribute('dur', Math.floor(3 * d[1] * 10) / 10 + 's')
@@ -480,8 +501,10 @@ function bars(nodeSVG, d, i) {
   animate.setAttribute('to', max_wid * d[1])
   rect.appendChild(animate)
 
+
   g.appendChild(text)
   g.appendChild(rect)
+  nodeSVG.appendChild(rectBack)
   nodeSVG.appendChild(g)
 }
 
