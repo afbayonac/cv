@@ -81,8 +81,10 @@
 
       #background {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
+        max-height: 530px;
         flex-wrap: wrap;
+        width: 100%;
       }
          #background > section {
              max-width: 50%;
@@ -208,7 +210,7 @@
           <path d="M 15 75
                    A 50 50 0 1 1 135 75
                    A 50 50 0 1 1 15 75 "
-                fill="none" stroke="#aaa"
+                fill="none" stroke="#ff7a45"
                 stroke-width="5">
           </path>
           <image x="25" y="25" xlink:href="profile_scaled.jpg" alt="profile image"  width="100px" clip-path="url(#circle_profile)"/>
@@ -244,6 +246,9 @@
           <a class="link" rel="external" target="_blank" target="_top" href="https://github.com/afbayonac">
             github
           </a>
+          <a class="link" rel="external" target="_blank" target="_top" href="https://afbayonac.github.io/cv/">
+            cv
+          </a>
           <p></p>
         </span>
       </div>
@@ -262,6 +267,17 @@
       <section id="experience">
         <header class="header_section" lang="en">experience</header>
         <header class="header_section" lang="es">experiencia</header>
+        <div>
+          <header lang="en">web developer</header>
+          <header lang="es">desarrollador web</header>
+          <span>PragmaSA</span>
+          <p lang="es">
+            Bancolombia cambio de marca, Desarrollo de aplicaciones angular y componentes sobre HCL Portal (IBM Web sphere) 
+          </p>
+          <p lang="en">
+            Bancolombia rebrand, Development of angular applications and components support by HCL Portal (IBM Web sphere)
+          </p>
+        </div>
         <div>
           <header lang="en">web developer</header>
           <header lang="es">desarrollador web</header>
@@ -328,57 +344,60 @@
           <span>Coursera - Universidad Autónoma de Barcelona</span>
         </div>
       </section>
+      <section id="skills">
+        <header class="header_section" lang="en">skills</header>
+        <header class="header_section" lang="es">habilidades</header>
+        <section id="graphs">
+          <div>
+            <header lang="es">herramientas</header>
+            <header lang="en">tools</header>
+            <svg id="skills_tools" height="150" width="220">
+              <pattern
+                 id="Hatch1.0x135"
+                 inkscape:stockid="Hatch 1.0 x -45°"
+                 x="0"
+                 y="0"
+                 width="5.010992937542464"
+                 height="5.010992937542464"
+                 patternUnits="userSpaceOnUse">
+                <path
+                   style="stroke:#000000;stroke-width:0.25mm"
+                   d="M 1.4676858509282904,-3.5433070866141736 8.554300024156637,3.5433070866141736"
+                   id="path14" />
+                <path
+                   style="stroke:#000000;stroke-width:0.25mm"
+                   d="M -3.5433070866141736,-3.5433070866141736 8.554300024156637,8.554300024156637"
+                   id="path16" />
+                <path
+                   style="stroke:#000000;stroke-width:0.25mm"
+                   d="M -3.5433070866141736,1.4676858509282904 3.5433070866141736,8.554300024156637"
+                   id="path18" />
+              </pattern>
+            </svg>
+          </div>
+
+          <div>
+            <header lang="es">lenguajes</header>
+            <header lang="en">languages</header>
+            <svg id="skills_lenguajes" height="90" width="200">
+            </svg>
+          </div>
+          <div>
+            <header lang="es">idiomas</header>
+            <header lang="en">idioms</header>
+            <svg id="skills_idioms" height="45" width="200">
+            </svg>
+          </div>
+          <div>
+            <header lang="es">librerias</header>
+            <header lang="en">libraries</header>
+            <svg id="skills_libraries" height="75" width="200">
+            </svg>
+          </div>
+
+      </section>
     </div>
-    <section id="skills">
-      <header class="header_section" lang="en">skills</header>
-      <header class="header_section" lang="es">habilidades</header>
-      <section id="graphs">
-        <div>
-          <header lang="es">herramientas</header>
-          <header lang="en">tools</header>
-          <svg id="skills_tools" height="150" width="200">
-            <pattern
-               id="Hatch1.0x135"
-               inkscape:stockid="Hatch 1.0 x -45°"
-               x="0"
-               y="0"
-               width="5.010992937542464"
-               height="5.010992937542464"
-               patternUnits="userSpaceOnUse">
-              <path
-                 style="stroke:#000000;stroke-width:0.25mm"
-                 d="M 1.4676858509282904,-3.5433070866141736 8.554300024156637,3.5433070866141736"
-                 id="path14" />
-              <path
-                 style="stroke:#000000;stroke-width:0.25mm"
-                 d="M -3.5433070866141736,-3.5433070866141736 8.554300024156637,8.554300024156637"
-                 id="path16" />
-              <path
-                 style="stroke:#000000;stroke-width:0.25mm"
-                 d="M -3.5433070866141736,1.4676858509282904 3.5433070866141736,8.554300024156637"
-                 id="path18" />
-            </pattern>
-          </svg>
-        </div>
-        <div>
-          <header lang="es">lenguajes</header>
-          <header lang="en">languages</header>
-          <svg id="skills_lenguajes" height="90" width="200">
-          </svg>
-        </div>
-        <div>
-          <header lang="es">librerias</header>
-          <header lang="en">libraries</header>
-          <svg id="skills_libraries" height="75" width="200">
-          </svg>
-        </div>
-        <div>
-          <header lang="es">idiomas</header>
-          <header lang="en">idioms</header>
-          <svg id="skills_idioms" height="45" width="200">
-          </svg>
-        </div>
-    </section>
+
     <section id="references">
       <header class="header_section" lang="en">references</header>
       <header class="header_section" lang="es">referencias</header>
@@ -423,6 +442,7 @@ const tools = [
   ['aws', 40],
   ['google-cloud', 20],
   ['firebase', 30],
+  ['HCL portal', 70]
 ]
 
 const svg_tools = document.getElementById('skills_tools')
