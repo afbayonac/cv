@@ -15,7 +15,9 @@ const htmlToPdf = async (url, nameFile) => {
   //To reflect CSS used for screens instead of print
   await page.emulateMediaType('screen');
 
-// Downlaod the PDF
+  await page.waitForTimeout(3000)
+  
+  // Downlaod the PDF
   const pdf = await page.pdf({
     path: `${nameFile}.pdf`,
     margin: { top: '100px', right: '50px', bottom: '100px', left: '50px' },
