@@ -4,8 +4,9 @@
 
 ## HTML To PDF
 
+
+install ..
 ``` bash
-npm install
-electron-pdf https://afbayonac.github.io/cv ./cv.pdf
-electron-pdf https://afbayonac.github.io/cv?lang=es ./cv_es.pdf
+    npm install
+    node html_to_pdf.js
 ```
