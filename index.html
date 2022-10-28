@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
+    <link defer href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
 
     <title>Andres Bayona</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
@@ -11,22 +11,23 @@
     <style media="screen">
 
       :root {
-        --mainColor: #ff7a45;
+        --mainColor: #e8ff00;
         --maxWidth: 800px;
-        --backgroundColor: #eee;
+        --backgroundColor: #fff;
+        --fontColor: #2b3550;
       }
 
       html, body {
         margin: 0px;
         padding: 0px;
         font-family: 'Arsenal', sans-serif;
-        color: #555;
+        color: var(--fontColor);
       }
 
       body {
-        padding: 10px;
+        padding: 16px;
+        margin: 0 auto;
         max-width: var(--maxWidth);
-        margin: auto;
         background-color: var(--backgroundColor);
       }
 
@@ -35,48 +36,50 @@
       }
 
       mark {
-        background-color: #fff;
-        color: #13c2c2;
+        background-color: var(--mainColor);
         padding: 0px 1px;
       }
 
       #banner {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
+        flex-wrap: nowrap;
         align-items: center;
-      }
-
-      #banner {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
+        justify-content: center;
       }
 
       #name, #title {
         display: block;
         font-family: 'Mate SC';
+        text-align: center;
+      }
 
+      #name {
+        font-size: 28px;
       }
         #name > a {
           text-decoration: none;
-          color: #444;
+          color: var(--fontColor);
         }
-
-      #name {
-        font-size: 40px;
-      }
+          #name > a > span {
+            white-space: nowrap;
+          }
 
       #title {
-        font-size: 22px;
-        color: #555;
+        font-size: 28px;
+        color: var(--fontColor);
       }
 
       #line_highlint {
-        width: calc(800px - 155px);
-        height: 10px;
+        width: 100%;
+        fill: var(--mainColor);
+        height: 5px;
         overflow: hidden;
+      }
+
+      #network {
+        display: block;
+        text-align: center;
       }
 
 
@@ -84,13 +87,11 @@
         display: flex;
         flex-direction: column;
         max-height: 550px;
-        flex-wrap: wrap;
+        margin-bottom: 16px;
         width: 100%;
       }
          #background > section {
-             max-width: 50%;
-             min-width: 400px;
-             margin: 0 auto;
+             max-width: 100%;
          }
           #background > section > div {
             margin: 10px;
@@ -101,7 +102,7 @@
             }
             #background > section > div > span {
               font-size: 12px;
-              color: #888;
+              color: var(--fontColor);
             }
             #background > section > div > p {
               margin-top: 0px;
@@ -113,36 +114,35 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
         text-align: center;
         align-items: flex-start;
       }
         #graphs > div {
-          width: 200px;
+          width: 180px;
         }
         #graphs > div > header {
           font-family: 'Mate SC';
           font-size:18px;
-          margin-bottom: 10px
+          margin-bottom: 16px
         }
         #graphs > div > svg > g:hover > text {
-
-            fill: var(--mainColor);
+            text-decoration: underline;
         }
         #graphs > div > svg > g:hover > rect {
-
             fill: var(--mainColor);
         }
 
       #references > div {
         margin: 10px;
       }
+
       .graph_text {
         user-select: none;
         font-family: 'Mate SC';
         font-size: 12px;
         transition: background-size .5s;
-        fill: #888;
+        fill: var(--fontColor);
       }
 
       .link {
@@ -165,50 +165,24 @@
         }
 
       .header_section {
-        color: #aaa;
+        color: var(--fontColor);
         font-family: 'Mate SC';
         font-size: 24px;
       }
 
-      @media only screen and (max-width: 800px) {
-        /* For mobile phones: */
-
-        #name {
-          font-size: 4.5vw;
-        }
-
-        #title {
-          font-size: 4vw;
-        }
-
-        #line_highlint {
-          width: calc(100vw - 125px);
-        }
-
-        #image_profile   {
-          width: 100px;
-          height: 100px;
-        }
-
-        #image_profile > svg {
-          transform: scale(0.7)  translate(-40px, -40px);
-        }
-
-        .header_section {
-          font-size: 3.5vw;
-        }
-
+      @media only screen and (min-width: 720px) {
         #background {
-
-        max-height: unset;
-
-      }
-
-        #background > section {
-             max-width: 600px;
-             min-width: 100%;
-             margin: 0 auto;
-         }
+          display: grid;
+          gap: 8px;
+          grid-template-columns: 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+        }
+          #background > section:nth-of-type(1) {
+            grid-column-start: 1;
+            grid-column-end: 2;
+            grid-row-start: 1;
+            grid-row-end: 3;
+          }
       }
     </style>
   </head>
@@ -224,35 +198,32 @@
           <path d="M 15 75
                    A 50 50 0 1 1 135 75
                    A 50 50 0 1 1 15 75 "
-                fill="none" stroke="#ff7a45"
+                fill="none" stroke="#e8ff00"
                 stroke-width="5">
           </path>
-          <image x="25" y="25" xlink:href="profile_scaled.jpg" alt="profile image"  width="100px" clip-path="url(#circle_profile)"/>
+          <image x="25" y="25" xlink:href="profile_scaled_2022.jpg" alt="profile image"  width="100px" clip-path="url(#circle_profile)"/>
         </svg>
       </div>
       <div>
-        <span id="name"><a href="https://www.linkedin.com/in/afbayonac">Andres Felipe Bayona Chinchilla</a></span>
+        <span id="name"><a href="https://www.linkedin.com/in/afbayonac"><span>ANDRES FELIPE</span> <span>BAYONA CHINCHILLA</span></a></span>
 
         <svg id="line_highlint">
-          <rect x="0" y="1" height="5" width="0">
-            <animate attributeName="width" to="700" begin="0s" dur="1s"
+          <rect x="0" y="1" height="50" width="0">
+            <animate attributeName="width" to="800" begin="0s" dur="1s"
                      calcMode="spline" fill="freeze" keyTimes="0 ; 1"
                      keySplines="0.13 0.58 0.52 0.83"/>
           </rect>
         </svg>
         <span id="title">
-          <span lang="es">programador</span>
-          <span lang="en">programmer</span>
+          <span lang="es">desarrollador fullstack</span>
+          <span lang="en">frontend fullstack</span>
         </span>
-        <span >📯
+        <span id="network">📯
           <a class="link" rel="external" target="_blank" href="https://wa.me/573105506907">
             whatsapp
           </a>
           <a class="link" rel="external"target="_blank" href="mailto:afbayonac@gmail.com?Subject=CV">
-            mail
-          </a>
-          <a class="link" rel="external" target="_blank" target="_top" href="https://twitter.com/afbayonac">
-            twitter
+            email
           </a>
           <a class="link" rel="external" target="_blank" target="_top" href="https://www.linkedin.com/in/afbayonac/">
             linkedin
@@ -271,27 +242,16 @@
       <header class="header_section" lang="es">resumen</header>
       <header class="header_section" lang="en">sumary</header>
       <p lang='es'>
-        Programador y desarrollador web con predilección a la programación funcional, entusiasta de la cultura de código abierto e interesado en desarrollar herramientas que tengan impacto en la sociedad, actualmente terminando mi ciclo universitario, fascinado con la analítica visual y con ganas de enfocar mis aprendizaje en las diferentes herramientas de almacenamiento y transmisión de datos.
+        Programador y desarrollador web con predilección a la programación funcional, entusiasta de la cultura de código abierto e interesado en desarrollar herramientas que tengan impacto en la sociedad, fascinado con la analítica visual y con ganas de enfocar mis aprendizaje en las diferentes herramientas de almacenamiento y transmisión de datos.
       </p>
       <p lang='en'>
-        Programmer and web developer with a predilection for functional programming, enthusiastic about open source culture and interested in developing tools that have an impact on society, currently finishing my university cycle, fascinated with visual analytics and want to focus my learning on different tools for data storage and transmission.
+        Programmer and web developer with a predilection for functional programming, enthusiastic about open source culture and interested in developing tools that have an impact on society, fascinated with visual analytics and want to focus my learning on different tools for data storage and transmission.
       </p>
     </section>
-    <div id="background">
+    <section id="background">
       <section id="experience">
         <header class="header_section" lang="en">experience</header>
         <header class="header_section" lang="es">experiencia</header>
-        <div>
-          <header lang="en">web developer</header>
-          <header lang="es">desarrollador web</header>
-          <span>PragmaSA</span>
-          <p lang="es">
-            Bancolombia cambio de marca, Desarrollo de aplicaciones angular y componentes sobre HCL Portal (IBM Web sphere) 
-          </p>
-          <p lang="en">
-            Bancolombia rebrand, Development of angular applications and components support by HCL Portal (IBM Web sphere)
-          </p>
-        </div>
         <div>
           <header lang="en">developer</header>
           <header lang="es">desarrollador </header>
@@ -301,6 +261,17 @@
           </p>
           <p lang="en">
             Bancolombia Tu 360 Movilidad, Development microservices in Java, Node and infraestructure AWS
+          </p>
+        </div>
+        <div>
+          <header lang="en">web developer</header>
+          <header lang="es">desarrollador web</header>
+          <span>PragmaSA</span>
+          <p lang="es">
+            Bancolombia cambio de marca, Desarrollo de aplicaciones angular y componentes sobre HCL Portal (IBM Web sphere) 
+          </p>
+          <p lang="en">
+            Bancolombia rebrand, Development of angular applications and components support by HCL Portal (IBM Web sphere)
           </p>
         </div>
         <div>
@@ -355,8 +326,8 @@
           <header lang="es">ingenieria sistemas e informatica</header>
           <header lang='en'>systems and computer engineering</header>
           <span>Universidad industrial de santander UIS
-            <mark lang="es">(realizando trabajo de grado)</mark>
-            <mark lang="en">(doing degree work)</mark>
+            <mark lang="es">(Proyecto no concluido)</mark>
+            <mark lang="en">(project not completed)</mark>
           </span>
         </div>
         <div>
@@ -428,14 +399,17 @@
 function beforeLoad () {
 // ........................................................................ text
 
+// get query params
+const params = new URLSearchParams(window.location.search);
 
-//default english
-const lang = navigator.language.split('-')[0] === 'es' ? 'es' : 'en'
+
+const lang = params.get('lang') 
+  ? params.get('lang') === 'es' ? 'es' : 'en'
+  : navigator.language.split('-')[0] === 'es' ? 'es' : 'en'
 
 document
   .querySelectorAll('header[lang], p[lang], span[lang], mark[lang]')
   .forEach(node => {
-    console.log(node, node.lang, lang)
     if (node.lang !== lang) node.remove()
   });
 
@@ -495,7 +469,7 @@ const svg_idioms = document.getElementById('skills_idioms')
 idioms.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_idioms, d, i))
 
 function bars(nodeSVG, d, i) {
-  const max_x = 200
+  const max_x = 180
   const min_x = 80
   const max_wid = max_x - min_x
 
