@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "electron-pdf": "^20.0.0"
+  }
+}
