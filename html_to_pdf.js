@@ -22,6 +22,7 @@ const htmlToPdf = async (url, nameFile) => {
     path: `${nameFile}.pdf`,
     margin: { top: '100px', right: '50px', bottom: '100px', left: '50px' },
     format: 'A3',
+    scale: 1.05
   });
 
   // Close the browser instance
@@ -29,6 +30,8 @@ const htmlToPdf = async (url, nameFile) => {
 }
 
 (async () => {
-  htmlToPdf('https://afbayonac.github.io/cv/', 'andres_felipe_bayona_chinchilla_cv')
-  htmlToPdf('https://afbayonac.github.io/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
+  // htmlToPdf('https://afbayonac.github.io/cv/', 'andres_felipe_bayona_chinchilla_cv')
+  // htmlToPdf('https://afbayonac.github.io/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
+  htmlToPdf('https://localhost:8080/cv/', 'andres_felipe_bayona_chinchilla_cv')
+  htmlToPdf('https://localhost:8080/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
 })();
