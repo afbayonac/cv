@@ -30,8 +30,8 @@ const htmlToPdf = async (url, nameFile) => {
 }
 
 (async () => {
-  // htmlToPdf('https://afbayonac.github.io/cv/', 'andres_felipe_bayona_chinchilla_cv')
-  // htmlToPdf('https://afbayonac.github.io/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
-  htmlToPdf('https://localhost:8080/cv/', 'andres_felipe_bayona_chinchilla_cv')
-  htmlToPdf('https://localhost:8080/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
+  htmlToPdf('https://afbayonac.github.io/cv/', 'en_andres_felipe_bayona_chinchilla_cv')
+  htmlToPdf('https://afbayonac.github.io/cv?lang=es', 'es_andres_felipe_bayona_chinchilla_cv')
+  // htmlToPdf('https://localhost:8080/cv/', 'andres_felipe_bayona_chinchilla_cv')
+  // htmlToPdf('https://localhost:8080/cv?lang=es', 'andres_felipe_bayona_chinchilla_cv.es')
 })();
