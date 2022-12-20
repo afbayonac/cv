@@ -3,6 +3,13 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Felipe Bayona</title>
+    <base href="https://afbayonac.github.io/cv/"/>
+    <meta name="robots" content="index, follow" />
+    <link defer href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
     <meta property="og:title" content="Felipe Bayona Web Developer">
     <meta property="og:description" content="Fullstack Javascript Elixir">
     <meta property="og:type" content="website">
@@ -11,194 +18,6 @@
     <meta property="og:image:width" content="720px"/>
     <meta property="og:image:width" content="300px"/>
     <meta property="og:image:type" content="image/png" />
-    <base href="https://afbayonac.github.io/cv/"/>
-    <meta name="robots" content="index, follow" />
-    <link defer href="https://fonts.googleapis.com/css?family=Arsenal|Mate+SC" rel="stylesheet">
-    <link rel="stylesheet" href="./css/reset.css">
-    <title>Felipe Bayona</title>
-    <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico"/>
-<!---.................................................................... styles --->
-    <style media="screen">
-
-      :root {
-        --mainColor: #e8ff00;
-        --maxWidth: 800px;
-        --backgroundColor: #fff;
-        --fontColor: #2b3550;
-      }
-
-      html, body {
-        margin: 0px;
-        padding: 0px;
-        font-family: 'Arsenal', sans-serif;
-        color: var(--fontColor);
-      }
-
-      body {
-        padding: 16px;
-        margin: 0 auto;
-        max-width: var(--maxWidth);
-        background-color: var(--backgroundColor);
-      }
-
-      p {
-        text-align: justify;
-      }
-
-      a {
-        text-decoration: none;
-        color: var(--fontColor);
-      }
-
-      mark {
-        background-color: var(--mainColor);
-        padding: 0px 3px;
-      }
-
-
-
-      h1, h2, h3 {
-        display: block;
-        font-family: 'Mate SC';
-      }
-
-      h1 {
-        font-size: 28px;
-        line-height: 32px;
-        text-align: center;
-      }
-        h1 > a > span {
-          white-space: nowrap;
-        }
-
-      h2 {
-        font-size: 18px;
-        line-height: 24px;
-      }
-
-      h3 {
-        font-size: 16px;
-        line-height: 20px;
-      }
-
-
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        list-style-position: inside;
-
-      }
-      ul > li::marker {
-        content:  "⸬ ";
-      }
-      ul > li:hover {
-        text-decoration: underline;
-      }
-      
-      ul > li:hover::marker {
-        font-weight: 600;
-      }
-
-      #banner {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-        align-items: center;
-        justify-content: center;
-      }
-      #title {
-        font-size: 28px;
-        line-height: 40px;
-        color: var(--fontColor);
-        text-align: center;
-      }
-
-      #line_highlint {
-        width: 100%;
-        fill: var(--mainColor);
-        height: 5px;
-        overflow: hidden;
-      }
-
-      #network {
-        display: block;
-        text-align: center;
-      }
-
-      #sumary {
-        padding: 24px 0 24px 0;
-      }
-        #sumary > p {
-          line-height: 20px;
-          letter-spacing: 0.3px;
-        }
-
-      #background {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-        margin-bottom: 16px;
-        width: 100%;
-      }
-         #background > section {
-             max-width: 100%;
-         }
-          #background > section > div {
-            margin: 10px;
-          }
-            #background > section > div > p {
-              margin-top: 0px;
-              font-size: 14px;
-              line-height: 18px;
-              letter-spacing: 0.2px;
-            }
-
-      #skills > div {
-        display: grid;
-        gap: 4px;
-        grid-template-columns: 110px 140px 110px;
-      }      
-      
-      sub {
-        font-size: 12px;
-        line-height: 16px;
-      }
-
-      .link {
-        cursor: pointer;
-        background:
-           linear-gradient(
-             to bottom, var(--mainColor) 0%,
-             var(--mainColor) 100%
-           );
-        background-position: 0 100%;
-        background-repeat: repeat-x;
-        background-size: 4px 2px;
-        color: #000;
-        text-decoration: none;
-        transition: background-size .5s;
-        margin: 0px 5px;
-      }
-        .link:hover {
-          background-size: 4px 50px;
-        }
-
-      @media only screen and (min-width: 720px) {
-        #background {
-          display: grid;
-          gap: 24px;
-          grid-template-columns: 1fr 1fr;
-          grid-template-rows: 245px 1fr 100px;
-        }
-          #background > section:nth-of-type(1) {
-            grid-column-start: 1;
-            grid-column-end: 2;
-            grid-row-start: 1;
-            grid-row-end: 4;
-          }
-      }
-    </style>
   </head>
   <body>
     <header id="banner">
