@@ -45,9 +45,59 @@
         text-align: justify;
       }
 
+      a {
+        text-decoration: none;
+        color: var(--fontColor);
+      }
+
       mark {
         background-color: var(--mainColor);
         padding: 0px 3px;
+      }
+
+
+
+      h1, h2, h3 {
+        display: block;
+        font-family: 'Mate SC';
+      }
+
+      h1 {
+        font-size: 28px;
+        line-height: 32px;
+        text-align: center;
+      }
+        h1 > a > span {
+          white-space: nowrap;
+        }
+
+      h2 {
+        font-size: 18px;
+        line-height: 24px;
+      }
+
+      h3 {
+        font-size: 16px;
+        line-height: 20px;
+      }
+
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style-position: inside;
+
+      }
+      ul > li::marker {
+        content:  "⸬ ";
+      }
+      ul > li:hover {
+        text-decoration: underline;
+      }
+      
+      ul > li:hover::marker {
+        font-weight: 600;
       }
 
       #banner {
@@ -57,29 +107,11 @@
         align-items: center;
         justify-content: center;
       }
-
-      #name, #title {
-        display: block;
-        font-family: 'Mate SC';
-        text-align: center;
-      }
-
-      #name {
-        font-size: 28px;
-        line-height: 32px;
-      }
-        #name > a {
-          text-decoration: none;
-          color: var(--fontColor);
-        }
-          #name > a > span {
-            white-space: nowrap;
-          }
-
       #title {
         font-size: 28px;
         line-height: 40px;
         color: var(--fontColor);
+        text-align: center;
       }
 
       #line_highlint {
@@ -95,11 +127,8 @@
       }
 
       #sumary {
-        padding: 16px 0;
+        padding: 24px 0 24px 0;
       }
-        #sumary > header {
-          padding: 8px 0;
-        }
         #sumary > p {
           line-height: 20px;
           letter-spacing: 0.3px;
@@ -118,16 +147,6 @@
           #background > section > div {
             margin: 10px;
           }
-            #background > section > div > header {
-              font-size: 18px;
-              line-height: 24px;
-              font-family: 'Mate SC';
-            }
-            #background > section > div > span {
-              font-size: 12px;
-              line-height: 18px;
-              color: var(--fontColor);
-            }
             #background > section > div > p {
               margin-top: 0px;
               font-size: 14px;
@@ -135,49 +154,15 @@
               letter-spacing: 0.2px;
             }
 
-
-      #graphs {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-        text-align: center;
-        align-items: flex-start;
-        gap: 8px;
-      }
-        #graphs > div {
-          width: 100%;
-        }
-        #graphs > div > header {
-          font-family: 'Mate SC';
-          font-size:18px;
-          margin-bottom: 8px
-        }
-        #graphs > div > svg > g:hover > text {
-            text-decoration: underline;
-        }
-        #graphs > div > svg > g:hover > rect {
-            fill: var(--mainColor);
-        }
-
-      #references > div {
-        margin: 10px;
-      }
-
-      #contact > div > a {
-        display: block;
-        line-height: 24px;
-        color: var(--fontColor);
-        text-decoration: var(--mainColor) underline;
-        text-decoration-thickness: 2px;
-      }
-
-      .graph_text {
-        user-select: none;
-        font-family: 'Mate SC';
+      #skills > div {
+        display: grid;
+        gap: 4px;
+        grid-template-columns: 110px 140px 110px;
+      }      
+      
+      sub {
         font-size: 12px;
-        transition: background-size .5s;
-        fill: var(--fontColor);
+        line-height: 16px;
       }
 
       .link {
@@ -199,28 +184,19 @@
           background-size: 4px 50px;
         }
 
-      .header_section {
-        color: var(--fontColor);
-        font-family: 'Mate SC';
-        font-size: 24px;
-      }
-
       @media only screen and (min-width: 720px) {
         #background {
           display: grid;
-          gap: 16px;
+          gap: 24px;
           grid-template-columns: 1fr 1fr;
-          grid-template-rows: 245px 1fr 170px;
+          grid-template-rows: 245px 1fr 100px;
         }
           #background > section:nth-of-type(1) {
             grid-column-start: 1;
             grid-column-end: 2;
             grid-row-start: 1;
-            grid-row-end: 3;
+            grid-row-end: 4;
           }
-        #graphs > div {
-          width: 180px;
-        }
       }
     </style>
   </head>
@@ -243,8 +219,9 @@
         </svg>
       </div>
       <div>
-        <span id="name"><a href="https://www.linkedin.com/in/afbayonac"><span>ANDRES FELIPE</span> <span>BAYONA CHINCHILLA</span></a></span>
-
+        <a href="https://www.linkedin.com/in/afbayonac"></a>
+          <h1><span>ANDRES FELIPE</span> <span>BAYONA CHINCHILLA</span></h1>
+        </a>
         <svg id="line_highlint">
           <rect x="0" y="1" height="50" width="0">
             <animate attributeName="width" to="800" begin="0s" dur="1s"
@@ -252,47 +229,44 @@
                      keySplines="0.13 0.58 0.52 0.83"/>
           </rect>
         </svg>
-        <span id="title">
+        <h2 id="title">
           <span lang="es">fullstack javascript elixir</span>
           <span lang="en">fullstack javascript elixir</span>
-        </span>
+        </h2>
         <span id="network">📯
           <a class="link" rel="external" target="_blank" href="https://wa.me/573105506907">
-            whatsapp
+            +57 3105506907
           </a>
           <a class="link" rel="external"target="_blank" href="mailto:afbayonac@gmail.com?Subject=CV">
-            email
+            afbayonac@gmail.com
           </a>
           <a class="link" rel="external" target="_blank" target="_top" href="https://www.linkedin.com/in/afbayonac/">
-            linkedin
+            linkedin.com/in/afbayonac/
           </a>
           <a class="link" rel="external" target="_blank" target="_top" href="https://github.com/afbayonac">
-            github
-          </a>
-          <a class="link" rel="external" target="_blank" target="_top" href="https://afbayonac.github.io/cv/">
-            cv
+            github.com/afbayonac
           </a>
         </span>
       </div>
     </header>
     <section id="sumary">
-      <header class="header_section" lang="es">resumen</header>
-      <header class="header_section" lang="en">sumary</header>
+      <h2 lang="es">resumen</h2>
+      <h2 lang="en">sumary</h2>
       <p lang='es'>
-        Programador y desarrollador web con predilección a la programación funcional, entusiasta de la cultura de código abierto e interesado en desarrollar herramientas que tengan impacto en la sociedad, fascinado con la analítica visual y con ganas de enfocar mis aprendizaje en las diferentes herramientas de almacenamiento y transmisión de datos.
+        +3 años de experiencia en el desarrollo, implementando experiencias de usuario con frameworks como React y Angular, definiendo y colocando en marcha API en lenguajes como JavaScript y Elixir, definiendo e implementando infraestructura como código  a través de CloudFormation,  entusiasta del código abierto, e interesado en desarrollar herramientas que tengan impacto en la sociedad, fascinado con la analítica visual y sus posibilidades.
       </p>
       <p lang='en'>
-        Programmer and web developer with a predilection for functional programming, enthusiastic about open source culture and interested in developing tools that have an impact on society, fascinated with visual analytics and want to focus my learning on different tools for data storage and transmission.
+        +3 years of development experience, implementing user experiences with frameworks like React and Angular, defining and deploying APIs in languages like JavaScript and Elixir, defining and deploying infrastructure as code through CloudFormation, open source enthusiast, and interested in developing tools that have an impact on society, fascinated with visual analytics and its possibilities.
       </p>
     </section>
     <section id="background">
       <section id="experience">
-        <header class="header_section" lang="en">experience</header>
-        <header class="header_section" lang="es">experiencia</header>
+        <h2 class="header_section" lang="en">experience</h2>
+        <h2 class="header_section" lang="es">experiencia</h2>
         <div>
-          <header lang="en">developer</header>
-          <header lang="es">desarrollador </header>
-          <span>BALTO</span>
+          <h3 lang="en">developer</h3>
+          <h3 lang="es">desarrollador </h3>
+          <sub>BALTO</sub>
           <p lang="es">
             Desarrollo de un plataforma Web empleando React, Elixir y AWS.  
           </p>
@@ -301,9 +275,9 @@
           </p>
         </div>
         <div>
-          <header lang="en">developer</header>
-          <header lang="es">desarrollador </header>
-          <span>PRAGMA</span>
+          <h3 lang="en">developer</header>
+          <h3 lang="es">desarrollador </h3>
+          <sub>PRAGMA</sub>
           <p lang="es">
             Bancolombia Tu 360 Movilidad, Desarrollo de microservicios en Java, NodeJs y infraestructura AWS
           </p>
@@ -312,9 +286,9 @@
           </p>
         </div>
         <div>
-          <header lang="en">web developer</header>
-          <header lang="es">desarrollador web</header>
-          <span>PRAGMA</span>
+          <h3 lang="en">web developer</h3>
+          <h3 lang="es">desarrollador web</h3>
+          <sub>PRAGMA</sub>
           <p lang="es">
             Bancolombia cambio de marca, Desarrollo de aplicaciones angular y componentes sobre HCL Portal (IBM Web sphere) 
           </p>
@@ -323,9 +297,9 @@
           </p>
         </div>
         <div>
-          <header lang="en">web developer</header>
-          <header lang="es">desarrollador web</header>
-          <span>NET CONSULT</span>
+          <h3 lang="en">web developer</h3>
+          <h3 lang="es">desarrollador web</h3>
+          <sub>NET CONSULT</sub>
           <p lang="es">
             Desarrollo de aplicaciones web soportadas en Angular y Firebase
           </p>
@@ -334,9 +308,9 @@
           </p>
         </div>
         <div>
-          <header lang="en">software developer</header>
-          <header lang="es">desarrollador de software</header>
-          <span>INOVA TECNOLOGIA</span>
+          <h3 lang="en">software developer</h3>
+          <h3 lang="es">desarrollador de software</h3>
+          <sub>INOVA TECNOLOGIA</sub>
           <p lang="es">
             Desarrollo de una aplicacion SCADA para el monitoreo de citygates de gas natural y desarrollo de software y hardware de asociado a radios de comunicacion de pozos petroliferos.
           </p>
@@ -345,9 +319,9 @@
           </p>
         </div>
         <div>
-          <header lang="es">participante apps.co x iteración</header>
-          <header lang="en">participant apps.co x iteration</header>
-          <span>SEVENT</span>
+          <h3 lang="es">participante apps.co x iteración</h3>
+          <h3 lang="en">participant apps.co x iteration</h3>
+          <sub>SEVENT</sub>
           <p lang="es">
             Desarrollo de una aplicacion con la funcion de promover espacios culturales
           </p>
@@ -356,9 +330,9 @@
           </p>
         </div>
         <div>
-          <header lang="es">co-organizador freedom software day 2016 uis</header>
-          <header lang="en">co-organizer freedom software day 2016 uis</header>
-          <span>CUSOL</span>
+          <h3 lang="es">co-organizador freedom software day 2016 uis</h3>
+          <h3 lang="en">co-organizer freedom software day 2016 uis</h3>
+          <sub>CUSOL</sub>
           <p lang="es">
             Participante y organizador del FISOL, evento enfocado de promover el uso de herramientas libres
           </p>
@@ -368,103 +342,89 @@
         </div>
       </section>
       <section id="education">
-        <header class="header_section" lang="en">education</header>
-        <header class="header_section" lang="es">educación</header>
+        <h2 class="header_section" lang="en">education</h2>
+        <h2 class="header_section" lang="es">educación</h2>
         <div>
-          <header lang="es">aws certified cloud practitioner</header>
-          <header lang="en">aws certified cloud practitioner</header>
+          <h3 lang="es">aws certified cloud practitioner</h3>
+          <h3 lang="en">aws certified cloud practitioner</h3>
           <span>Amazon Web Services (AWS)</span>
         </div>
         <div>
-          <header lang="es">ingenieria sistemas e informatica</header>
-          <header lang='en'>systems and computer engineering</header>
-          <span>Universidad industrial de santander UIS
-            <mark lang="es">(Proyecto no concluido)</mark>
-            <mark lang="en">(project not completed)</mark>
+          <h3 lang="es">ingenieria sistemas e informatica</h3>
+          <h3 lang='en'>systems and computer engineering</h3>
+          <span>Universidad industrial de santander UIS 
+            <mark lang="es">(no concluido)</mark>
+            <mark lang="en">(not completed)</mark>
+          </span>
+          <span>
+            <span lang='es'>10 nivel</span>
+            <span lang='en'>10 nivel</span>
           </span>
         </div>
         <div>
-          <header>m102: mongodb for dbas</header>
+          <h3>m102: mongodb for dbas</h3>
           <span>MongoDB University</span>
         </div>
         <div>
-          <header lang="es">detección de objetos</header>
-          <header lang="en">object detection</header>
+          <h3 lang="es">detección de objetos</h3>
+          <h3 lang="en">object detection</h3>
           <span>Coursera - Universidad Autónoma de Barcelona</span>
         </div>
       </section>
       <section id="skills">
-        <header class="header_section" lang="en">skills</header>
-        <header class="header_section" lang="es">habilidades</header>
-        <section id="graphs">
-          <div>
-            <header lang="es">herramientas</header>
-            <header lang="en">tools</header>
-            <svg id="skills_tools" height="165" width="200">
-              <pattern
-                 id="Hatch1.0x135"
-                 inkscape:stockid="Hatch 1.0 x -45°"
-                 x="0"
-                 y="0"
-                 width="5.010992937542464"
-                 height="5.010992937542464"
-                 patternUnits="userSpaceOnUse">
-                <path
-                   style="stroke:#000000;stroke-width:0.25mm"
-                   d="M 1.4676858509282904,-3.5433070866141736 8.554300024156637,3.5433070866141736"
-                   id="path14" />
-                <path
-                   style="stroke:#000000;stroke-width:0.25mm"
-                   d="M -3.5433070866141736,-3.5433070866141736 8.554300024156637,8.554300024156637"
-                   id="path16" />
-                <path
-                   style="stroke:#000000;stroke-width:0.25mm"
-                   d="M -3.5433070866141736,1.4676858509282904 3.5433070866141736,8.554300024156637"
-                   id="path18" />
-              </pattern>
-            </svg>
-          </div>
-
-          <div>
-            <header lang="es">lenguajes</header>
-            <header lang="en">languages</header>
-            <svg id="skills_lenguajes" height="135" width="200">
-            </svg>
-          </div>
-          <div>
-            <header lang="es">idiomas</header>
-            <header lang="en">idioms</header>
-            <svg id="skills_idioms" height="45" width="200">
-            </svg>
-          </div>
-          <div>
-            <header lang="es">librerias</header>
-            <header lang="en">libraries</header>
-            <svg id="skills_libraries" height="75" width="200">
-            </svg>
-          </div>
-          </section>
-      </section>
-      <section id="contact">
-        <header class="header_section" lang="en">contact</header>
-        <header class="header_section" lang="es">contacto</header>
+        <h2 lang="en">skills</h2>
+        <h2 lang="es">habilidades</h2>
         <div>
-          <a rel="external" target="_blank" href="https://wa.me/573105506907">
-            +57 3105506907
-          </a>
-          <a rel="external"target="_blank" href="mailto:afbayonac@gmail.com?Subject=CV">
-            afbayonac@gmail.com
-          </a>
-          <a rel="external" target="_blank" target="_top" href="https://www.linkedin.com/in/afbayonac/">
-            www.linkedin.com/in/afbayonac/
-          </a>
-          <a rel="external" target="_blank" target="_top" href="https://github.com/afbayonac">
-            github.com/afbayonac
-          </a>
-          <a rel="external" target="_blank" target="_top" href="https://afbayonac.github.io/cv/">
-            afbayonac.github.io/cv/
-          </a>
+          <div>
+            <h3 lang="es">lenguajes</h3>
+            <h3 lang="en">languages</h3>
+            <ul>
+              <li>JavaScript</li>
+              <li>Elixir</li>
+              <li>Python</li>
+              <li>Bash</li>
+              <li>SQL</li>
+              <li>C++</li>
+              <li>COBOL</li>
+            </ul>
+          </div>
+          <div>
+            <h3 lang="es">herramientas</h3>
+            <h3 lang="en">tools</h3>
+            <ul>
+              <li>GIT</li>
+              <li>AWS</li>
+              <li>Google Cloud</li>
+              <li>Visual Studio Code</li>
+              <li>kitcad</li>
+              <li>Firebase</li>
+              <li>HCL Portal</li>
+              <li>Node.js</li>
+              <li>Next.js</li>
+              <li>Arduino</li>
+            </ul>
+          </div>
+          <div>
+            <h3 lang="es">librerias</h3>
+            <h3 lang="en">libraries</h3>
+            <ul>
+              <li>Mocha</li>
+              <li>React</li>
+              <li>Angular</li>
+              <li>D3js</li>
+              <li>redux</li>
+              <li>RxJS</li>
+              <li>Jasmine</li>
+            </ul>
+            </svg>
+          </div>
         </div>
+      </section>
+      <section>
+        <h2 lang="es">Idiomas</h2>
+        <h2 lang="en">Languages</h2>
+        <span lang="es">Español - Ingles</span>
+        <span lang="en">Spanish - Inglish</span>
       </section>
     </section>
 
@@ -472,8 +432,6 @@
 
   <script>
 function beforeLoad () {
-// ........................................................................ text
-
 // get query params
 const params = new URLSearchParams(window.location.search);
 
@@ -483,111 +441,10 @@ const lang = params.get('lang')
   : navigator.language.split('-')[0] === 'es' ? 'es' : 'en'
 
 document
-  .querySelectorAll('header[lang], p[lang], span[lang], mark[lang]')
+  .querySelectorAll('header[lang], p[lang], span[lang], mark[lang], h2[lang], h3[lang]')
   .forEach(node => {
     if (node.lang !== lang) node.remove()
   });
-
-
-// ..................................................................... scripts
-
-const tools = [
-  ['kicad', 30],
-  ['inkscape', 40],
-  ['vscode', 100],
-  ['webstorm', 30],
-  ['arduino', 80],
-  ['npm', 60],
-  ['git', 80],
-  ['aws', 40],
-  ['google-cloud', 20],
-  ['firebase', 30],
-  ['hcl portal', 70]
-]
-
-const svg_tools = document.getElementById('skills_tools')
-tools.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_tools, d, i))
-
-const lenguajes  = [
-  ['python', 40],
-  ['javascript', 80],
-  ['node', 80],
-  ['typescript', 80],
-  ['bash', 30],
-  ['c++', 40],
-  ['sql', 20],
-  ['Java', 20],
-  ['elixir', 20],
-]
-
-const svg_lenguajes = document.getElementById('skills_lenguajes')
-lenguajes.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_lenguajes, d, i))
-
-const libraries = [
-  ['react', 50],
-  ['angular', 40],
-  ['d3js', 50],
-  ['mocha', 60],
-  ['express', 80]
-]
-
-const svg_libraries = document.getElementById('skills_libraries')
-libraries.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_libraries, d, i))
-
-const idioms = [
-  ['español', 100],
-  ['english', 30],
-  ['français', 2]
-]
-
-const svg_idioms = document.getElementById('skills_idioms')
-idioms.map(d => [d[0], d[1] / 100]).map((d, i) => bars(svg_idioms, d, i))
-
-function bars(nodeSVG, d, i) {
-  const max_x = 180
-  const min_x = 80
-  const max_wid = max_x - min_x
-
-  const y = 15 * i
-
-  const g = document.createElementNS("http://www.w3.org/2000/svg", 'g')
-
-  // text
-  const text = document.createElementNS("http://www.w3.org/2000/svg", 'text')
-  text.setAttribute('y', y + 8 )
-  text.setAttribute('x', min_x - 5)
-  text.setAttribute('class', 'graph_text')
-  text.setAttribute('text-anchor', 'end')
-  text.textContent = d[0]
-
-  const rectBack = document.createElementNS("http://www.w3.org/2000/svg", 'rect')
-  rectBack.setAttribute('x', min_x )
-  rectBack.setAttribute('y', y )
-  rectBack.setAttribute('width', max_wid)
-  rectBack.setAttribute('height', 10)
-  rectBack.setAttribute('fill', "#ddd")
-
-  const rect = document.createElementNS("http://www.w3.org/2000/svg", 'rect')
-  rect.setAttribute('x', min_x )
-  rect.setAttribute('y', y )
-  rect.setAttribute('width', max_wid * d[1])
-  rect.setAttribute('height', 10)
-  rect.setAttribute('fill', "url(#Hatch1.0x135)")
-
-  const animate = document.createElementNS("http://www.w3.org/2000/svg", 'animate')
-  animate.setAttribute('attributeName', 'width')
-  animate.setAttribute('dur', Math.floor(3 * d[1] * 10) / 10 + 's')
-  animate.setAttribute('from', 2)
-  animate.setAttribute('to', max_wid * d[1])
-  rect.appendChild(animate)
-
-  g.appendChild(text)
-  g.appendChild(rect)
-  nodeSVG.appendChild(rectBack)
-  nodeSVG.appendChild(g)
-}
-
-//--------------------------------------------------------------------
 }
 
 window.onload = beforeLoad()
