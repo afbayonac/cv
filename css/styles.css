@@ -105,9 +105,17 @@ ul>li:hover::marker {
 }
 
 #network {
-  display: block;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
 }
+
+#network > a {
+  width: fit-content;
+}
+
 
 #sumary {
   padding: 24px 0 24px 0;
@@ -184,4 +192,17 @@ sub {
     grid-row-start: 1;
     grid-row-end: 4;
   }
+
+  #network {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  #network > a {
+    width: fit-content;
+  }
+  
 }
