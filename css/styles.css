@@ -109,11 +109,11 @@ ul>li:hover::marker {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 8px;
 }
 
 #network > a {
   width: fit-content;
+  padding: 8px;
 }
 
 
@@ -160,21 +160,22 @@ sub {
   line-height: 16px;
 }
 
-.link {
+
+.link > span {
   cursor: pointer;
   background:
     linear-gradient(to bottom, var(--mainColor) 0%,
       var(--mainColor) 100%);
   background-position: 0 100%;
   background-repeat: repeat-x;
-  background-size: 4px 2px;
+  background-size: 4px 3px;
   color: #000;
   text-decoration: none;
   transition: background-size .5s;
   margin: 0px 5px;
 }
 
-.link:hover {
+.link:hover > span {
   background-size: 4px 50px;
 }
 
@@ -198,11 +199,10 @@ sub {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 8px;
   }
   
   #network > a {
-    width: fit-content;
+    padding: 8px;
   }
   
 }
